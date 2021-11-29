@@ -1,25 +1,40 @@
-# New Project
+HasuraをDockerコンテナで起動
+```
+docker-compose up
+```
+以下でhasuraコンテナにアクセスできる。
+http://localhost:8080/console
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+http://localhost:8080/console/data/manage/connect
+上記のURLでデータベース接続ができるようになる。
 
-## Available Scripts
+Database Display Name
+適当な名前
 
-### npm start
+Database URL
+postgres://postgres:postgrespassword@postgres:5432/postgres
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+以下のテーブルをまずは作って見ましょう。
+value	type	default value
+id	UUID	gen_random_uuid()
+text	text
+done	boolean	false
 
-### npm run build
+以下のクエリを実行できるかを確認。
+```
+query getTodos {
+ todos {
+   id
+   text
+   done
+  }
+}
+```
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
 
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.mjs` config file.
+dockerがすぐに起動できない人はCloud版のHasuraを使う。
+https://zenn.dev/mrsung/articles/75cac31621bb6e
 
-### npm test
-
-Launches the application test runner.
-Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+以下、React側でトライするサンプル
+https://zenn.dev/mrsung/articles/0c27b767060fec
