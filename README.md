@@ -32,6 +32,29 @@ query getTodos {
 }
 ```
 
+```
+# GraphiQL上で実行するクエリの一例
+mutation addTodo {
+  insert_todos(objects: { text: "apple" }) {
+    returning {
+      done
+      id
+      text
+    }
+  }
+}
+
+# 変数で書く場合
+mutation addTodo($text: String!) {
+  insert_todos(objects: { text: $text }) {
+    returning {
+      done
+      id
+      text
+    }
+  }
+}
+```
 
 dockerがすぐに起動できない人はCloud版のHasuraを使う。
 https://zenn.dev/mrsung/articles/75cac31621bb6e
