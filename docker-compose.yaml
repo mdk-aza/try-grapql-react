@@ -1,5 +1,5 @@
 #https://hasura.io/docs/latest/graphql/core/getting-started/docker-simple.html
-version: '3.7'
+version: '3.7' #Dockerのバージョン依存？3に変えると動いた
 services:
   postgres:
     image: postgres:12

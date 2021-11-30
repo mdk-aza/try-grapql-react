@@ -6,7 +6,7 @@ import {
 } from '@apollo/client'
 
 const httpLink = createHttpLink({
-    uri: 'http://localhost:8080/v1/graphql',
+    uri: 'http://localhost:8080/v1/graphql',  //  cloudのHsuera/v1/graphql
     headers: {
         'x-hasura-admin-secret': "myadminsecretkey"
     }

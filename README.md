@@ -2,8 +2,17 @@ HasuraをDockerコンテナで起動
 ```
 docker-compose up
 ```
+
+Web側の実装に必要なので、ライブラリもインストールしておく
+```
+yarn install
+```
+
 以下でhasuraコンテナにアクセスできる。
 http://localhost:8080/console
+
+以下を求められるので、
+HASURA_GRAPHQL_ADMIN_SECRET=「myadminsecretkey」を入力。
 
 http://localhost:8080/console/data/manage/connect
 上記のURLでデータベース接続ができるようになる。
@@ -16,9 +25,11 @@ postgres://postgres:postgrespassword@postgres:5432/postgres
 
 
 以下のテーブルをまずは作って見ましょう。
+テーブル名 todos
+
 value	type	default value
 id	UUID	gen_random_uuid()
-text	text
+text	Text
 done	boolean	false
 
 以下のクエリを実行できるかを確認。
@@ -61,3 +72,6 @@ https://zenn.dev/mrsung/articles/75cac31621bb6e
 
 以下、React側でトライするサンプル
 https://zenn.dev/mrsung/articles/0c27b767060fec
+
+ここからハンズオン。
+https://zenn.dev/mrsung/articles/0c27b767060fec#graphql-%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%AE%E8%BF%BD%E5%8A%A0
