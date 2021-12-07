@@ -74,5 +74,21 @@ https://zenn.dev/mrsung/articles/75cac31621bb6e
 以下、React側でトライするサンプル
 https://zenn.dev/mrsung/articles/0c27b767060fec
 
-ここからハンズオン。
+11/30(火)
+上記のREADMEの設定に加えて、 ここからハンズオン1
+完成系はqueryブランチ
+
+参考URL
 https://zenn.dev/mrsung/articles/0c27b767060fec#graphql-%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%AE%E8%BF%BD%E5%8A%A0
+
+12/7(火)
+ここからハンズオン2
+完成はsubscriptionブランチ
+
+参考URL
+https://qiita.com/HorikawaTokiya/items/31c3500a58bcc4285253
+
+12/14(火)
+次はFirebaseAuthを組み合わせて、認証周り
+https://qiita.com/HorikawaTokiya/items/31c3500a58bcc4285253
+
