@@ -23,6 +23,7 @@ Database Display Name
 Database URL
 postgres://postgres:postgrespassword@postgres:5432/postgres
 
+最後にconnect databaseボタンを押す
 
 以下のテーブルをまずは作って見ましょう。
 テーブル名 todos
