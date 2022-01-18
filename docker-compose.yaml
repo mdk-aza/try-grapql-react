@@ -3,7 +3,7 @@ version: '3.7' #Dockerのバージョン依存？3に変えると動いた
 services:
   postgres:
     image: postgres:12
-    restart: always
+#    restart: always
     volumes:
       - db_data:/var/lib/postgresql/data
     ports:
@@ -19,7 +19,7 @@ services:
       - "8080:8080"
     depends_on:
       - "postgres"
-    restart: always
+#    restart: always
     environment:
       ## postgres database to store Hasura metadata
       HASURA_GRAPHQL_METADATA_DATABASE_URL: postgres://postgres:postgrespassword@postgres:5432/postgres
