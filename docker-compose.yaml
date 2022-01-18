@@ -2,10 +2,10 @@
 version: '3.7' #Dockerのバージョン依存？3に変えると動いた
 services:
   postgres:
-    image: postgres:12
+    image: postgres:12.9
 #    restart: always
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data1
     ports:
       - 5432:5432
     environment:
@@ -14,7 +14,7 @@ services:
       POSTGRES_HOST: local
       POSTGRES_HOST_AUTH_METHOD: trust
   graphql-engine:
-    image: hasura/graphql-engine:v2.0.10
+    image: hasura/graphql-engine:v2.1.1
     ports:
       - "8080:8080"
     depends_on:
