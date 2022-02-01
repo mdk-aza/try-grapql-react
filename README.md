@@ -76,3 +76,7 @@ https://zenn.dev/mrsung/articles/0c27b767060fec
 
 ここからハンズオン。
 https://zenn.dev/mrsung/articles/0c27b767060fec#graphql-%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%AE%E8%BF%BD%E5%8A%A0
+
+
+JWT 
+https://hasura.io/jwt-config/
