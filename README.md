@@ -80,3 +80,7 @@ https://zenn.dev/mrsung/articles/0c27b767060fec#graphql-%E3%82%AF%E3%82%A8%E3%83
 
 JWT 
 https://hasura.io/jwt-config/
+
+FirebaseProjectを作成し、ここでprojectIDを入れてJWT Configを生成し、docker-compose.yamlに環境変数の追加を行う
+JWT_SECRET:  '{"type":"RS256","jwk_url": "https://www.googleapis.com/service_accounts/v1/jwk/erviceaccount.com", "audience": "hasura-examfc", "issuer": "https://securetoken.gora-example-1d0fc"}"'
+↑参考なので、一部文字列変更などを行っている
